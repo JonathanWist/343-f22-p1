@@ -1,0 +1,187 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: gray;
+}
+header {
+    top: 0;
+    height: 170px;
+    position: sticky;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/bouldering.jpg");
+    background-size: cover;
+}
+h1 {
+    font-size: 3rem;
+    color: aqua;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#navbar {
+    width: 100vw;
+    height: 3rem;
+    background-color: lightgreen;
+}
+#navbar ul {
+    margin: 0;
+    height: 7vh;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 2em;
+}
+main {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+#scale {
+    width: 300px;
+    height: 600px;
+    margin-left: 200px;
+}
+.medImage {
+    margin: 10px;
+    margin-left: 50px;
+    width: 600px;
+    height: 400px;
+}
+.largeImage {
+    grid-column: span 2;
+    margin: 100px;
+    width: 85%;
+    height: 800px;
+}
+.background {
+    margin-top: 20px;
+    height: 90%;
+    width: 95%;
+    background-color: lightgray;
+    border: 3px solid black;
+}
+.shorter {
+    height: 60%;
+}
+.tall {
+    grid-row: span 2;
+}
+.left {
+    margin-left: 20px;
+}
+p {
+    font-size: 1.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+@media screen and (max-width: 1500px) {
+    main {
+        grid-template-columns: .5fr .5fr;
+    }
+    .largeImage {
+        width: 95%;
+        height: 95%;
+        margin-left: 10px;
+    }
+    .shorter {
+        height: 90%;
+    }
+    .centralRock .medImage {
+        width: 75%;
+        height: 55%;
+        margin-left: 50px;
+    }
+    #brooklyn .medImage {
+        width: 75%;
+        height: 55%;
+        margin-left: 50px;
+    }
+    .medImage {
+        width: 95%;
+        height: 95%;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .background {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #scale {
+        margin-left: 10px;
+    }
+    /* p {
+        font-size: 1.25rem;
+    } */
+}
+@media screen and (max-width: 900px) {
+    header {
+        height: 275px;
+    }
+    header div {
+        height: 75px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #navbar {
+        height: 25vh;
+    }
+    #navbar ul{
+        font-size: 1.5rem;
+        height: 25vh;
+        vertical-align: 25vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #brooklyn {
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .largeImage {
+        margin: 0px 10px 0px;
+        width: 97%;
+        height: 97%;
+    }
+    .centralRock .medImage {
+        width: 100%;
+    }
+    .medImage {
+        margin: 10px 0px 10px 10px;
+        width: 95%;
+        height: 400px;
+    }
+    .background {
+        margin-left: 10px;
+        height: 95%;
+    }
+    .centralRock .background {
+        width: 300px;
+    }
+    #brooklyn .background {
+        width: 100vw;
+    }
+    #brooklyn .largeImage {
+        height: 500px;
+        width: 100vw;
+    }
+    .left {
+        margin-left: 10px;
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
